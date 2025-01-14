@@ -28,7 +28,7 @@ const testimonialsData = [
 
 const TestimonialsSection = () => {
   return (
-    <div className="w-full py-[100px] px-24 bg-neutral-100">
+    <div className="w-full py-[100px] px-24 bg-transparent">
       <h2 className="text-5xl font-heading font-bold text-center text-accent mb-16">
         Patient Testimonials
       </h2>

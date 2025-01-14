@@ -1,21 +1,26 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-export const BenefitsCard = ({ title, description, image }) => {
+export const BenefitsCard = ({ title, description, Icon }) => {
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8 }}
-      className="bg-transparent hover:shadow-2xl rounded-lg p-6 flex flex-col items-center text-center relative border border-transparent hover:border-gray-200 transition duration-500"
+      className="bg-transparent hover:shadow-2xl rounded-lg p-6 flex flex-col items-center text-center relative border border-transparent hover:border-gray-200 transition duration-500 cursor-default"
     >
-      {/* Image */}
-      <img
-        src={image || "https://via.placeholder.com/150x150"}
-        alt={title}
-        className="w-28 h-28 object-cover rounded-full border-4 border-accent mb-4"
-      />
+      {/* Icon */}
+      {Icon ? (
+        <div className="w-28 h-28 flex justify-center items-center rounded-full border-4 border-accent mb-4 text-accent text-6xl">
+          <Icon />
+        </div>
+      ) : (
+        <div className="w-28 h-28 flex justify-center items-center rounded-full border-4 border-gray-300 mb-4 text-gray-400 text-6xl">
+          ?
+        </div>
+      )}
+
       {/* Title */}
       <h3 className="text-xl font-bold font-heading text-secondary mb-2">
         {title}
@@ -25,3 +30,4 @@ export const BenefitsCard = ({ title, description, image }) => {
     </motion.div>
   );
 };
+

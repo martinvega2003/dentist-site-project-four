@@ -20,7 +20,7 @@ const HeroSection = ({ heading, subheading, image }) => {
       <div className="relative z-10 text-white px-20">
         {/* Heading */}
         <motion.h1
-          className="text-4xl md:text-6xl font-heading font-bold mb-4"
+          className="text-4xl md:text-6xl font-heading font-bold mb-2"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -30,7 +30,7 @@ const HeroSection = ({ heading, subheading, image }) => {
 
         {/* Subheading */}
         <motion.p
-          className="text-lg md:text-xl font-body mb-6"
+          className="text-xl md:text-3xl font-body mb-6"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}

@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaCheckCircle, FaUserMd, FaShieldAlt } from "react-icons/fa";
+import image from "../../images/office.webp";
 
 const BenefitsDetailsSection = () => {
   const bgImage = "https://via.placeholder.com/1920x1080";
@@ -8,7 +9,7 @@ const BenefitsDetailsSection = () => {
   return (
     <div
       style={{
-        backgroundImage: `url(${bgImage})`,
+        backgroundImage: `url(${image || bgImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
@@ -18,9 +19,14 @@ const BenefitsDetailsSection = () => {
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
       <div className="container mx-auto flex items-center justify-center h-full relative px-6 md:px-20">
-        {/* Left Side: Benefits Card */}
+        {/* Left Side (Optional additional content or empty space) */}
+        <div className="w-1/3 pl-8 hidden md:block"></div>
+
+        {/* Right Side: Benefits Card */}
         <div className="relative w-full lg:w-2/3 h-full flex justify-center items-center mt-[70px] border-4 border-secondary rounded-lg p-2 z-20">
-          <div className="relative w-full h-full flex flex-col items-start justify-center p-8 bg-white rounded-lg shadow-lg z-20">
+          <div
+            className="relative w-full h-full flex flex-col items-start justify-center p-8 bg-white bg-opacity-70 rounded-lg shadow-lg z-20"
+          >
             {/* Section Title */}
             <motion.h2
               initial={{ opacity: 0, x: -50 }}
@@ -88,9 +94,6 @@ const BenefitsDetailsSection = () => {
             </ul>
           </div>
         </div>
-
-        {/* Right Side (Optional additional content or empty space) */}
-        <div className="w-1/3 pl-8 hidden md:block"></div>
       </div>
     </div>
   );

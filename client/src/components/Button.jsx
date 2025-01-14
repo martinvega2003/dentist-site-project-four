@@ -10,7 +10,7 @@ export const Button = ({ children, className, icon: Icon }) => {
       transition={{ duration: 0.8, delay: 0.4 }}
     >
       <button
-        className={`font-heading py-3 px-6 rounded-lg text-lg flex items-center gap-2 transition-all duration-300 ${
+        className={`font-heading py-3 px-6 text-lg flex items-center gap-2 transition-all duration-300 ${
           className || "bg-primary hover:bg-secondary text-white"
         }`}
       >

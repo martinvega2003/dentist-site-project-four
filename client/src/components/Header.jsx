@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Button } from "./Button";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 z-50 w-full shadow-md bg-white h-[110px]">
+    <header className="fixed top-0 z-50 w-full shadow-md bg-white h-fit">
       {/* Lead Magnet */}
       <div className="w-full bg-accent text-white text-center py-2 text-sm">
         💰 Get a $100 discount on your first consultation! Book now!
@@ -47,9 +48,9 @@ const Header = () => {
               </a>
             </li>
           </ul>
-          <button className="mt-4 lg:mt-0 bg-accent text-white px-6 py-2 rounded-lg hover:bg-accent-dark">
-            Book Appointment
-          </button>
+          <Button className="bg-accent hover:bg-secondary text-white">
+            Book An Appointment
+          </Button>
         </nav>
 
         {/* Burger Button */}

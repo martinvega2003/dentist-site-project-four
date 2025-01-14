@@ -14,7 +14,7 @@ const customIcon = new L.Icon({
 
 const ContactSection = () => {
   return (
-    <div className="relative w-full py-[250px] px-20 bg-neutral-50 overflow-hidden">
+    <div className="relative z-10 w-full py-[250px] px-20 bg-neutral-50 overflow-hidden">
       {/* Decorative Background */}
       <div className="absolute top-10 left-20 text-primary opacity-20 text-8xl">
         <BsGeoAltFill />
@@ -26,7 +26,7 @@ const ContactSection = () => {
 
       <div className="flex flex-col md:flex-row gap-8">
         {/* Map Section */}
-        <div className="w-full md:w-[60%] h-[600px] rounded-lg overflow-hidden shadow-lg">
+        <div className="w-full md:w-[60%] h-[400px] md:h-[600px] rounded-lg overflow-hidden shadow-lg">
           <MapContainer
             center={[40.7128, -74.006]} // Example: New York City
             zoom={13}

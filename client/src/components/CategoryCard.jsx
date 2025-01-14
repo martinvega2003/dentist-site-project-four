@@ -45,10 +45,10 @@ const CategoryCard = ({
           {services.map((service, index) => (
             <li key={index}>
               <Link
-                to="/"
+                to={"/services/" + service.name}
                 className="text-white hover:scale-[1.02] transition duration-300 font-body text-base flex justify-start items-center gap-2"
               >
-                {service} <FaLongArrowAltRight />
+                {service.name} <FaLongArrowAltRight />
               </Link>
             </li>
           ))}

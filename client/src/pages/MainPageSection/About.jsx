@@ -75,11 +75,11 @@ const AboutSection = () => {
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 0.8 }}
       >
-        <div className="border-4 border-secondary rounded-lg p-6">
+        <div className="border-2 border-secondary rounded-lg rounded-tl-[50px] rounded-br-[50px] p-2">
           <img
             src={image || "https://via.placeholder.com/450x450"}
             alt="About Us Placeholder"
-            className="rounded-lg shadow-md"
+            className="rounded-lg shadow-md rounded-tl-[50px] rounded-br-[50px]"
           />
         </div>
       </motion.div>

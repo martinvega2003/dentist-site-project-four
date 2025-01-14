@@ -8,19 +8,19 @@ const BenefitsSection = () => {
       title: "Affordable Dentistry",
       description:
         "We believe in providing top-quality care at prices everyone can afford.",
-      image: "https://via.placeholder.com/150x150",
+      icon: FaTooth,
     },
     {
       title: "Patient Education",
       description:
         "Empowering our patients with knowledge to make the best decisions for their oral health.",
-      image: "https://via.placeholder.com/150x150",
+      icon : FaRegSmile,
     },
     {
       title: "Comfortable Environment",
       description:
         "Experience a welcoming and relaxing atmosphere during every visit.",
-      image: "https://via.placeholder.com/150x150",
+      icon: FaHandsHelping,
     },
   ];
 
@@ -55,7 +55,7 @@ const BenefitsSection = () => {
               key={index}
               title={benefit.title}
               description={benefit.description}
-              image={benefit.image}
+              Icon={benefit.icon}
             />
           ))}
         </div>
