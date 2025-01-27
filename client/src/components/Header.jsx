@@ -1,68 +1,54 @@
-import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { Button } from "./Button";
+import React, { useState } from 'react';
+import { FaBars, FaTimes } from 'react-icons/fa';
+import { Button } from './Button';
+import { Link } from 'react-router-dom';
 
-const Header = () => {
-  const [menuOpen, setMenuOpen] = useState(false);
+const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 z-50 w-full shadow-md bg-white h-fit">
-      {/* Lead Magnet */}
+    <nav className="bg-white shadow-md fixed top-0 w-full h-fit z-50">
       <div className="w-full bg-accent text-white text-center py-2 text-sm">
-        💰 Get a $100 discount on your first consultation! Book now!
+        Get a $100 discount on your first consultation! Book now!
       </div>
-
-      {/* Main Header */}
-      <div className="flex justify-between items-center px-6 py-4 lg:px-20">
+      <div className="container mx-auto px-6 py-10 flex items-center justify-between h-full">
         {/* Logo */}
-        <div className="text-2xl font-bold text-primary">
-          <a href="/">Clinic Logo</a>
+        <Link to="/">
+          <div className="relative z-20 text-2xl font-bold text-primary cursor-pointer">DentalClinic</div>
+        </Link>
+
+        {/* Hamburger Icon */}
+        <div className="md:hidden relative z-20 text-2xl text-primary cursor-pointer" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+          {isMenuOpen ? <FaTimes /> : <FaBars />}
         </div>
 
-        {/* Links */}
-        <nav
-          className={`lg:flex gap-8 items-center ${
-            menuOpen ? "flex flex-col fixed top-0 left-0 w-full h-full bg-white z-50" : "hidden"
-          } lg:relative lg:w-auto lg:h-auto`}
-        >
-          <button
-            className="absolute top-6 right-6 lg:hidden text-primary text-3xl"
-            onClick={() => setMenuOpen(false)}
-          >
-            <FaTimes />
-          </button>
-          <ul className="lg:flex gap-8 text-lg text-gray-700">
-            <li>
-              <a href="#about" className="hover:text-primary">
-                About Us
-              </a>
+        {/* Links & Button */}
+        <div className={`absolute z-10 top-16 left-0 w-full bg-white shadow-lg md:shadow-none md:static md:flex md:items-center md:w-auto ${isMenuOpen ? 'block' : 'hidden'}`}>
+          <ul className="flex flex-col items-center md:flex-row md:items-center md:gap-1 lg:gap-6">
+            <li className="text-gray-700 hover:text-secondary text-lg py-2 px-4 md:py-0">
+              <a href="#home">Home</a>
             </li>
-            <li>
-              <a href="#services" className="hover:text-primary">
-                Services
-              </a>
+            <li className="text-gray-700 hover:text-secondary text-lg py-2 px-4 md:py-0">
+              <a href="#about">About</a>
             </li>
-            <li>
-              <a href="#contact" className="hover:text-primary">
-                Contact
-              </a>
+            <li className="text-gray-700 hover:text-secondary text-lg py-2 px-4 md:py-0">
+              <a href="#services">Services</a>
+            </li>
+            <li className="text-gray-700 hover:text-secondary text-lg py-2 px-4 md:py-0">
+              <a href="#contact">Contact</a>
             </li>
           </ul>
-          <Button className="bg-accent hover:bg-secondary text-white">
-            Book An Appointment
-          </Button>
-        </nav>
-
-        {/* Burger Button */}
-        <button
-          className="lg:hidden text-primary text-3xl"
-          onClick={() => setMenuOpen(true)}
-        >
-          <FaBars />
-        </button>
+          <div className="p-4 md:p-0 flex justify-center items-center md:ml-6">
+            <Link to="/booking">
+              <Button className="bg-primary hover:bg-secondary text-white text-xs lg:text-lg">
+                Book An Appointment
+              </Button>
+            </Link>
+          </div>
+        </div>
       </div>
-    </header>
+    </nav>
   );
 };
 
-export default Header;
+export default Navbar;

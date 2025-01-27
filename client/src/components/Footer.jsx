@@ -1,4 +1,5 @@
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -22,6 +23,11 @@ const Footer = () => {
               <a href="#contact" className="hover:text-white">
                 Contact
               </a>
+            </li>
+            <li>
+              <Link to="/booking" className="hover:text-white">
+                Book An Appointment
+              </Link>
             </li>
           </ul>
         </div>

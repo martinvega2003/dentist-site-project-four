@@ -1,74 +1,32 @@
 import React from "react";
-import { motion } from "framer-motion";
-import { FaStar } from "react-icons/fa";
+import { reviewsData as reviews } from "../../data/reviewsData";
+import { TestimonialCard } from "../../components/TestimonialCard";
 
-const testimonialsData = [
-  {
-    name: "John Doe",
-    location: "New York, USA",
-    review:
-      "This is a placeholder review. The service was amazing and exceeded my expectations. Highly recommended!",
-    image: "https://via.placeholder.com/150", // Placeholder image
-  },
-  {
-    name: "Jane Smith",
-    location: "Los Angeles, USA",
-    review:
-      "Another placeholder review. Great experience! The team was professional and friendly.",
-    image: "https://via.placeholder.com/150", // Placeholder image
-  },
-  {
-    name: "Mike Johnson",
-    location: "Chicago, USA",
-    review:
-      "Amazing experience. Highly skilled professionals and the process was smooth from start to finish.",
-    image: "https://via.placeholder.com/150", // Placeholder image
-  },
-];
 
-const TestimonialsSection = () => {
+const Testimonials = () => {
   return (
-    <div className="w-full py-[100px] px-24 bg-transparent">
-      <h2 className="text-5xl font-heading font-bold text-center text-accent mb-16">
-        Patient Testimonials
+    <div className="relative w-full flex flex-col justify-start items-center py-20 px12">
+      <div className="absolute inset-0 opacity-30">
+        <div className="w-full h-full bg-gradient-to-b from-white to-accent" />
+      </div>
+      <h2 className="relative z-10 w-full px-12 text-primary text-2xl md:text-4xl lg:text-6xl font-heading text-left">
+        Read It From Our Clients
       </h2>
-      <motion.div
-        className="flex justify-center items-center gap-8"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <div className="w-full">
-          {testimonialsData.map((testimonial, index) => (
-            <motion.div
-              key={index}
-              className="flex justify-start items-center gap-6 mb-8"
-              initial={{ x: index % 2 === 0 ? -200 : 200 }}
-              animate={{ x: 0 }}
-              transition={{
-                type: "spring",
-                stiffness: 100,
-                damping: 25,
-                delay: index * 0.5,
-              }}
-            >
-              <div className="w-16 h-16 rounded-full overflow-hidden">
-                <img src={testimonial.image} alt="Patient" className="w-full h-full object-cover" />
-              </div>
-              <div>
-                <p className="text-lg text-gray-800">{testimonial.review}</p>
-                <div className="flex items-center mt-2">
-                  <FaStar className="text-yellow-400" />
-                  <p className="text-md font-semibold text-gray-700 ml-2">{testimonial.name}</p>
-                </div>
-                <p className="text-sm text-gray-600">{testimonial.location}</p>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
+      <p className="relative z-10 w-full text-gray-700 text-md md:text-lg font-body text-left mb-24 mt-6 px-12">
+        Don't take our word for it, read the most recent reviews we had from our clients. We always try to deliver the best service for our community.
+      </p>
+      <div className="relative z-10 py-6 px-12 flex flex-wrap justify-start gap-8">
+        {reviews.map((review) => (
+          <TestimonialCard
+            key={review.id}
+            name={review.name}
+            review={review.review}
+            image={review.image}
+          />
+        ))}
+      </div>
     </div>
   );
 };
 
-export default TestimonialsSection;
+export default Testimonials;

@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { FaRegHandshake, FaTooth, FaSmile } from "react-icons/fa";
 import image from "../images/dentist-clinic.jpg";
 import { Button } from "./Button";
+import { Link } from "react-router-dom";
 
 const LeadMagnetSection = () => {
   return (
@@ -48,7 +49,9 @@ const LeadMagnetSection = () => {
                 Book your first appointment today and receive a $100 discount on
                 any treatment.
               </p>
-              <Button>Claim Your Offer</Button>
+              <Link to="/booking">
+                <Button>Claim Your Offer</Button>
+              </Link>
             </div>
           </div>
         </div>

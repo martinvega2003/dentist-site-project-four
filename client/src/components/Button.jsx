@@ -1,8 +1,9 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaCalendarAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-export const Button = ({ children, className, icon: Icon }) => {
+export const Button = ({ children, className, icon: Icon, path }) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}

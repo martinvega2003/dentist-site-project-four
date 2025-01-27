@@ -2,10 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Button } from "./Button";
 import defaultImg from "../images/main-hero.webp"
+import { Link } from "react-router-dom";
 
 const HeroSection = ({ heading, subheading, image }) => {
   return (
     <div
+      id="home"
       className="relative w-full h-[80vh] flex items-center"
       style={{
         backgroundImage: `url(${image || defaultImg})`,
@@ -39,9 +41,11 @@ const HeroSection = ({ heading, subheading, image }) => {
         </motion.p>
 
         {/* CTA Button */}
-        <Button>
-            Book An Appointment
-        </Button>
+        <Link to="/booking">
+          <Button>
+              Book An Appointment
+          </Button>
+        </Link>
 
         {/* Call Us */}
         <motion.p

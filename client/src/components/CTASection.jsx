@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Button } from "./Button";
 
 const CTASection = () => {
@@ -10,9 +11,9 @@ const CTASection = () => {
           <p className="text-lg mb-6">
             Don’t wait any longer to start your journey towards a healthier, happier you. Our expert team is here to guide you every step of the way.
           </p>
-          <Button>
-            Book Your Appointment Now
-          </Button>
+          <Link to="/booking">
+            <Button>Book Your Appointment Now</Button>
+          </Link>
         </div>
       </div>
     );

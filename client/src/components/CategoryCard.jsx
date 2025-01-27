@@ -12,8 +12,8 @@ const CategoryCard = ({
 }) => {
   return (
     <div
-      className={`flex ${
-        imagePosition === "left" ? "flex-row-reverse" : "flex-row"
+      className={`flex flex-col ${
+        imagePosition === "left" ? "md:flex-row-reverse" : "md:flex-row"
       } items-center gap-16 mb-10 w-full relative`}
     >
       {/* Decorative background in Card */}
@@ -25,7 +25,7 @@ const CategoryCard = ({
       </div>
 
       {/* Card Content */}
-      <div className="flex-1 bg-gradient-to-r from-secondary to-primary shadow-lg rounded-lg p-6 h-[400px] md:h-[350px] relative z-10 overflow-hidden">
+      <div className="w-full md:w-[70%] bg-gradient-to-r from-secondary to-primary shadow-lg rounded-lg p-6 h-[400px] md:h-[350px] relative z-10 overflow-hidden">
         {/* Icon */}
         <div className="text-primary text-4xl mb-4">
           <Icon />
@@ -57,7 +57,7 @@ const CategoryCard = ({
 
       {/* Image */}
       <div
-        className="w-[40%] md:w-[30%] min-h-full min-w-[150px] h-[400px] md:h-[350px] bg-cover bg-center rounded-lg shadow-md relative z-10"
+        className="w-full md:w-[30%] min-h-full min-w-[150px] h-[400px] md:h-[350px] bg-cover bg-center rounded-lg shadow-md relative z-10"
         style={{
           backgroundImage: `url(${image})`,
         }}

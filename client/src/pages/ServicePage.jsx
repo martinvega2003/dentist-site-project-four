@@ -2,9 +2,9 @@ import React, {useState} from 'react'
 import HeroSection from '../components/HeroSection'
 import { FaRegCreditCard, FaClinicMedical, FaPhoneAlt } from "react-icons/fa";
 import bgImage from "../images/patient-smiling.webp"
-import ImageOne from "../images/testimonial-w-1.jpeg"
-import ImageTwo from "../images/testimonial-m-1.webp"
-import ImageThree from "../images/bright-smile.jpg"
+import ImageOne from "../images/dentist-&-client.jpg"
+import ImageTwo from "../images/receptionist-&-client.jpg"
+import ImageThree from "../images/dentist-w-1.jpg"
 import CTASection from '../components/CTASection';
 import LeadMagnetSection from '../components/LeadMagnetSection';
 import ContactSection from './MainPageSection/ContactSection';
@@ -26,7 +26,7 @@ export const ServicePage = ({service}) => {
       <section className="pt-32 lg:py-32 px-6 lg:px-20 w-full">
         <div className="flex flex-col lg:flex-row justify-start lg:justify-between items-center lg:items-start space-x-6">
           {/* Service Description */}
-          <div className="w-full lg:w-1/2 text-center lg:text-left flex lg:block flex-col justify-start items-center">
+          <div className="w-full lg:w-1/2 text-center lg:text-left flex lg:block flex-col justify-start items-center lg:p-6 lg:border-2 lg:border-primary lg:rounded-br-[50px] lg:shadow-2xl">
             <h2 className="text-2xl font-heading font-bold text-primary mb-4">
               Learn About {service.name}
             </h2>
@@ -34,12 +34,12 @@ export const ServicePage = ({service}) => {
           </div>
 
           {/* Service Image with Orange Border */}
-          <div className="w-full md:w-1/2 flex justify-center items-center">
+          <div className="w-full lg:w-1/2 flex justify-center items-center">
             <div className="relative">
               <img
                 src={ImageOne || "https://via.placeholder.com/400x400"} // Replace with actual image URL
                 alt={service.name}
-                className="w-full h-auto border-2 border-orange-500 p-2"
+                className="hidden lg:block w-full h-auto border-2 lg:border-none border-orange-500 p-2 lg:p-0"
               />
             </div>
           </div>
@@ -47,10 +47,10 @@ export const ServicePage = ({service}) => {
       </section>
 
       {/* Payment Information and Image Section */}
-      <section className="md:py-16 px-6 md:px-20 w-full">
-        <div className="flex flex-col md:flex-row-reverse justify-start md:justify-between items-center md:items-start space-x-6 mt-12">
+      <section className="lg:py-16 lg:px-20 w-full">
+        <div className="bg-primary lg:bg-transparent flex flex-row-reverse justify-start lg:justify-between items-center lg:items-start space-x-6 mt-12 p-6 lg:p-0">
           {/* Payment Information */}
-          <div className="w-full md:w-1/2 md:ml-6 flex md:block flex-col justify-start items-center mb-8 lg:mb-0">
+          <div className="w-[60%] bg-white -mt-12 lg:mt-0 lg:w-1/2 lg:ml-6 flex lg:block flex-col justify-start items-start mb-8 lg:mb-0 p-6 rounded-br-[50px] shadow-2xl border-2 lg:border-none border-primary">
             <h2 className="text-2xl font-heading font-bold text-accent mb-4">
               Payment Information
             </h2>
@@ -75,12 +75,12 @@ export const ServicePage = ({service}) => {
           </div>
 
           {/* Payment Image */}
-          <div className="w-full md:w-1/2 flex justify-center items-center">
+          <div className="w-0 lg:w-1/2 flex justify-center items-center">
             <div className="relative">
               <img
                 src={ImageTwo || "https://via.placeholder.com/400x400"}// Replace with actual payment-related image URL
                 alt="Payment Options"
-                className="w-full h-auto border-2 border-orange-500 p-2"
+                className="hidden lg:block w-full h-auto border-2 lg:border-none border-orange-500 p-2 lg:p-0"
               />
             </div>
           </div>
