@@ -11,19 +11,19 @@ const LeadMagnetSection = () => {
       {/* Background Decorations */}
       <div className="absolute inset-0">
         {/* Large Circle */}
-        <div className="bg-secondary w-[300px] h-[300px] rounded-full opacity-30 absolute top-10 left-10"></div>
+        <div className="bg-secondary w-[150px] h-[150px] sm:w-[300px] sm:h-[300px] rounded-full opacity-30 absolute top-10 left-10"></div>
         {/* Small Circle */}
-        <div className="bg-secondary w-[150px] h-[150px] rounded-full opacity-50 absolute bottom-20 right-20"></div>
+        <div className="bg-secondary w-[100px] h-[100px] sm:w-[150px] sm:h-[150px] rounded-full opacity-50 absolute bottom-20 right-20"></div>
         {/* Icon Decorations */}
-        <FaSmile className="text-secondary text-[120px] opacity-20 absolute top-1/3 left-10" />
-        <FaTooth className="text-secondary text-[100px] opacity-30 absolute bottom-10 left-1/3" />
-        <FaRegHandshake className="text-secondary text-[80px] opacity-40 absolute top-5 right-1/4" />
+        <FaSmile className="text-secondary text-[80px] sm:text-[120px] opacity-20 absolute top-1/3 left-10" />
+        <FaTooth className="text-secondary text-[60px] sm:text-[100px] opacity-30 absolute bottom-10 left-1/3" />
+        <FaRegHandshake className="text-secondary text-[40px] sm:text-[80px] opacity-40 absolute top-5 right-1/4" />
       </div>
 
       <div className="container md:mx-20 flex items-center justify-center h-full relative">
         {/* Left Side (Image + Content) */}
         <div className="w-full md:w-2/3 h-full flex justify-center items-center">
-          <div className="relative w-[450px] md:min-w-[650px] h-[500px] mt-[100px] flex items-center justify-center flex-col p-6 border-2 border-secondary rounded-lg overflow-hidden">
+          <div className="relative w-[300px] sm:w-[450px] md:min-w-[650px] h-[400px] sm:h-[500px] mt-[100px] flex items-center justify-center flex-col p-6 border-2 border-secondary rounded-lg overflow-hidden">
             {/* Image with opacity overlay */}
             <div
               style={{
@@ -37,20 +37,20 @@ const LeadMagnetSection = () => {
             {/* Text Content */}
             <div className="relative z-10 text-center text-white flex flex-col items-center">
               <h2
-                className="text-2xl font-bold font-heading mb-4"
+                className="text-xl sm:text-2xl font-bold font-heading mb-4"
                 style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)" }}
               >
                 Exclusive Offer for New Patients!
               </h2>
               <p
-                className="mb-6 text-lg font-body w-2/3"
+                className="mb-6 text-md sm:text-lg font-body w-2/3"
                 style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.7)" }}
               >
                 Book your first appointment today and receive a $100 discount on
                 any treatment.
               </p>
               <Link to="/booking">
-                <Button>Claim Your Offer</Button>
+                <Button className="w-fit h-fit bg-primary hover:bg-secondary text-white py-3 sm:py-4 px-6 sm:px-12 text-md sm:text-lg">Claim Your Offer</Button>
               </Link>
             </div>
           </div>

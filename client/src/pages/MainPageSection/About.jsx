@@ -20,7 +20,7 @@ const AboutSection = () => {
   return (
     <motion.div
       id="about"
-      className="flex flex-col md:flex-row items-center md:items-start justify-center px-8 py-48 md:py-64 bg-white relative"
+      className="flex flex-col md:flex-row items-center md:items-start justify-center px-4 sm:px-8 py-48 md:py-64 bg-white relative"
       ref={ref}
       animate={controls}
       initial={{ y: 50, opacity: 0.8 }}

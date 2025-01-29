@@ -12,17 +12,17 @@ export const BenefitsCard = ({ title, description, Icon }) => {
     >
       {/* Icon */}
       {Icon ? (
-        <div className="w-28 h-28 flex justify-center items-center rounded-full border-4 border-accent mb-4 text-accent text-6xl">
+        <div className="w-20 sm:w-28 h-20 sm:h-28 flex justify-center items-center rounded-full border-4 border-accent mb-4 text-accent text-6xl">
           <Icon />
         </div>
       ) : (
-        <div className="w-28 h-28 flex justify-center items-center rounded-full border-4 border-gray-300 mb-4 text-gray-400 text-6xl">
+        <div className="w-20 sm:w-28 h-20 sm:h-28 flex justify-center items-center rounded-full border-4 border-gray-300 mb-4 text-gray-400 text-6xl">
           ?
         </div>
       )}
 
       {/* Title */}
-      <h3 className="text-xl font-bold font-heading text-secondary mb-2">
+      <h3 className="text-lg sm:text-xl font-bold font-heading text-secondary mb-2">
         {title}
       </h3>
       {/* Description */}

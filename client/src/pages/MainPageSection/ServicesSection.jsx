@@ -5,7 +5,7 @@ import { FaCircle } from "react-icons/fa";
 
 const ServicesSection = () => {
   return (
-    <div id="services" className="w-full py-[200px] px-24 bg-neutral-50 relative overflow-hidden">
+    <div id="services" className="w-full py-[200px] px-4 sm:px-24 bg-neutral-50 relative overflow-hidden">
       {/* Background Decorations (Large Circles) */}
       <div className="absolute top-[-10%] left-[-10%] z-0">
         <FaCircle className="text-primary opacity-20 w-[150px] h-[150px]" />

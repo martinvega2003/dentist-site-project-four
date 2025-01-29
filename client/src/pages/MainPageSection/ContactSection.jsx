@@ -14,7 +14,7 @@ const customIcon = new L.Icon({
 
 const ContactSection = () => {
   return (
-    <div id="contact" className="relative z-10 w-full py-[250px] px-20 bg-neutral-50 overflow-hidden">
+    <div id="contact" className="relative z-10 w-full py-[250px] px-4 sm:px-20 bg-neutral-50 overflow-hidden">
       {/* Decorative Background */}
       <div className="absolute top-10 left-20 text-primary opacity-20 text-8xl">
         <BsGeoAltFill />

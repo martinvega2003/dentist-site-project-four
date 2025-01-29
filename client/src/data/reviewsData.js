@@ -27,7 +27,7 @@ export const reviewsData = [
     },
     {
       id: 4,
-      name: "Emily Johnson",
+      name: "Richard Johnson",
       review:
         "The experience was fantastic from start to finish. They were very communicative and ensured all my questions were answered. The quality of the service is unmatched, and they truly go above and beyond to deliver excellent results. I will definitely be returning in the future.",
       image: imgFour || "https://via.placeholder.com/150",

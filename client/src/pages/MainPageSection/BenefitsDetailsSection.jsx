@@ -18,7 +18,7 @@ const BenefitsDetailsSection = () => {
       {/* Background Overlay */}
       <div className="absolute inset-0 bg-black opacity-50"></div>
 
-      <div className="container mx-auto flex items-center justify-center h-full relative px-6 md:px-20">
+      <div className="container mx-auto flex items-center justify-center h-full relative px-4 md:px-20">
         {/* Left Side (Optional additional content or empty space) */}
         <div className="w-1/3 pl-8 hidden md:block"></div>
 
@@ -59,8 +59,8 @@ const BenefitsDetailsSection = () => {
                 transition={{ duration: 0.8, delay: 0.4 }}
                 className="flex items-start space-x-4"
               >
-                <FaCheckCircle className="text-secondary text-2xl mt-1" />
-                <span className="text-gray-700 font-body text-lg">
+                <FaCheckCircle className="text-secondary text-lg sm:text-2xl mt-1" />
+                <span className="text-gray-700 font-body text-sm sm:text-lg">
                   <strong>Expert Team:</strong> Our experienced dentists ensure
                   top-notch care for every patient.
                 </span>
@@ -72,8 +72,8 @@ const BenefitsDetailsSection = () => {
                 transition={{ duration: 0.8, delay: 0.6 }}
                 className="flex items-start space-x-4"
               >
-                <FaUserMd className="text-secondary text-2xl mt-1" />
-                <span className="text-gray-700 font-body text-lg">
+                <FaUserMd className="text-secondary text-lg sm:text-2xl mt-1" />
+                <span className="text-gray-700 font-body text-sm sm:text-lg">
                   <strong>Personalized Plans:</strong> Customized treatments
                   designed for your specific needs.
                 </span>
@@ -85,8 +85,8 @@ const BenefitsDetailsSection = () => {
                 transition={{ duration: 0.8, delay: 0.8 }}
                 className="flex items-start space-x-4"
               >
-                <FaShieldAlt className="text-secondary text-2xl mt-1" />
-                <span className="text-gray-700 font-body text-lg">
+                <FaShieldAlt className="text-secondary text-lg sm:text-2xl mt-1" />
+                <span className="text-gray-700 font-body text-sm sm:text-lg">
                   <strong>Safe Environment:</strong> We prioritize your safety
                   with state-of-the-art equipment.
                 </span>

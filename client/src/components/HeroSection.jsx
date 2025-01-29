@@ -19,7 +19,7 @@ const HeroSection = ({ heading, subheading, image }) => {
       <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
       {/* Content */}
-      <div className="relative z-10 text-white px-20">
+      <div className="relative z-10 text-white px-4 sm:px-20">
         {/* Heading */}
         <motion.h1
           className="text-4xl md:text-6xl font-heading font-bold mb-2"

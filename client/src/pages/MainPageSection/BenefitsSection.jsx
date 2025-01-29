@@ -25,25 +25,25 @@ const BenefitsSection = () => {
   ];
 
   return (
-    <div className="bg-transparent relative py-64">
+    <div className="bg-transparent relative py-64 px-4">
       {/* Background Decorations */}
-      <div className="absolute top-10 left-10 text-secondary opacity-30 text-9xl">
+      <div className="absolute top-10 left-10 text-secondary opacity-30 text-6xl sm:text-9xl">
         <FaTooth />
       </div>
-      <div className="absolute bottom-10 right-10 text-secondary opacity-30 text-9xl">
+      <div className="absolute bottom-10 right-10 text-secondary opacity-30 text-6xl sm:text-9xl">
         <FaRegSmile />
       </div>
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-secondary opacity-20 text-9xl">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-secondary opacity-20 text-6xl sm:text-9xl">
         <FaHandsHelping />
       </div>
 
       <div className="container mx-auto">
         {/* Section Heading */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold font-heading text-accent">
+          <h2 className="text-xl sm:text-3xl font-bold font-heading text-accent">
             Why Choose Our Clinic?
           </h2>
-          <p className="text-lg text-gray-200 mt-4">
+          <p className="text-md sm:text-lg text-gray-200 mt-4">
             Discover the benefits of choosing us for your dental care.
           </p>
         </div>
