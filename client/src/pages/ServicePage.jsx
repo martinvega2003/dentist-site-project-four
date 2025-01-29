@@ -30,7 +30,7 @@ export const ServicePage = ({service}) => {
             <h2 className="text-2xl font-heading font-bold text-primary mb-4">
               Learn About {service.name}
             </h2>
-            <p className="text-gray-700 text-lg max-w-[60%] text-justify lg:max-w-full lg:text-left mb-16 lg:mb-6">{service.description}</p>
+            <p className="text-gray-700 text-lg w-[95%] sm:max-w-[60%] text-justify lg:max-w-full lg:text-left mb-16 lg:mb-6">{service.description}</p>
           </div>
 
           {/* Service Image with Orange Border */}
@@ -48,27 +48,27 @@ export const ServicePage = ({service}) => {
 
       {/* Payment Information and Image Section */}
       <section className="lg:py-16 lg:px-20 w-full">
-        <div className="bg-primary lg:bg-transparent flex flex-row-reverse justify-start lg:justify-between items-center lg:items-start space-x-6 mt-12 p-6 lg:p-0">
+        <div className="bg-primary lg:bg-transparent flex flex-row-reverse justify-start lg:justify-between items-center lg:items-start space-x-6 mt-12 p-4 sm:p-6 lg:p-0">
           {/* Payment Information */}
-          <div className="w-[60%] bg-white -mt-12 lg:mt-0 lg:w-1/2 lg:ml-6 flex lg:block flex-col justify-start items-start mb-8 lg:mb-0 p-6 rounded-br-[50px] shadow-2xl border-2 lg:border-none border-primary">
-            <h2 className="text-2xl font-heading font-bold text-accent mb-4">
+          <div className="w-full sm:w-[60%] bg-white -mt-12 lg:mt-0 lg:w-1/2 lg:ml-6 flex lg:block flex-col justify-start items-start mb-8 lg:mb-0 p-6 rounded-br-[50px] shadow-2xl border-2 lg:border-none border-primary">
+            <h2 className="text-xl sm:text-2xl font-heading font-bold text-accent mb-4">
               Payment Information
             </h2>
             <ul className="space-y-4 text-lg">
               <li className="flex items-center space-x-3">
-                <FaClinicMedical className="text-secondary text-xl" />
+                <FaClinicMedical className="text-secondary text-lg sm:text-xl" />
                 <span>Insurance Accepted</span>
               </li>
               <li className="flex items-center space-x-3">
-                <FaRegCreditCard className="text-secondary text-xl" />
+                <FaRegCreditCard className="text-secondary text-lg sm:text-xl" />
                 <span>Payment Plans Accepted</span>
               </li>
               <li className="flex items-center space-x-3">
-                <FaRegCreditCard className="text-secondary text-xl" />
+                <FaRegCreditCard className="text-secondary text-lg sm:text-xl" />
                 <span>Credit Cards Accepted</span>
               </li>
               <li className="flex items-center space-x-3">
-                <FaPhoneAlt className="text-secondary text-xl" />
+                <FaPhoneAlt className="text-secondary text-lg sm:text-xl" />
                 <span>Call us: (555) 123-4567</span>
               </li>
             </ul>
@@ -88,10 +88,10 @@ export const ServicePage = ({service}) => {
       </section>
 
       {/* FAQs Section */}
-      <section className="lg:py-16 px-6 lg:px-20 w-full">
-        <div className="flex flex-col lg:flex-row justify-start lg:justify-between items-center lg:items-start space-x-6 mt-12">
+      <section className="lg:py-16 px-4 sm:px-6 lg:px-20 w-full">
+        <div className="flex flex-col lg:flex-row justify-start lg:justify-between items-center lg:items-start mt-12">
           {/* FAQs Content */}
-          <div className="w-full lg:w-1/2 lg:mr-6 mb-8 lg:mb-0 flex lg:block flex-col justify-start items-center">
+          <div className="w-full lg:w-1/2 lg:mr-6 mb-8 lg:mb-0 flex lg:block flex-col justify-start items-start">
             <h2 className="text-2xl font-heading font-bold text-accent mb-4">
               Solve Your Common Doubts About {service.name}
             </h2>
