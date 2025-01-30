@@ -47,7 +47,7 @@ const ContactSection = () => {
         </div>
 
         {/* Contact Info Section */}
-        <div className="w-full md:w-[40%] flex justify-center items-start bg-transparent p-8">
+        <div className="w-full md:w-[40%] flex justify-center items-start bg-transparent p-4 sm:p-8">
           <div className="w-full h-[450px] flex flex-col justify-between">
             <div className="flex flex-col justify-start border-b border-secondary">
               <h2 className="text-5xl font-heading font-bold text-left text-accent mb-4">

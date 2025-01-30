@@ -14,7 +14,7 @@ const Navbar = () => {
       <div className="w-full bg-accent text-white text-center py-2 text-sm">
         Get a $100 discount on your first consultation! Book now!
       </div>
-      <nav className="relative z-60 bg-white shadow-md w-full h-[100px]">
+      <nav className="relative z-60 bg-white shadow-md w-full h-[70px]">
         <div className="px-10 flex items-center justify-between h-full">
           {/* Logo */}
           <Link to="/">
